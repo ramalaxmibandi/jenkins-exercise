@@ -23,13 +23,13 @@ pipeline {
         stage('latest image of docker') {
             steps {
                 script {
-                 sh './latest-image.sh ramalaxmi/devops-integration' >> https://github.com/ramalaxmibandi/jenkins-exercise/out1   
+                 sh './latest-image.sh ramalaxmi/devops-integration'   
                 }
             }
             
         }
     }
-      // stage('Push image to Hub') {
+       stage('Push image to Hub') {
            steps {
                 sh 'docker push ramalaxmi/devops-integration:$BUILD_NUMBER'
                }
