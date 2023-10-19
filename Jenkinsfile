@@ -4,11 +4,6 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
     stages{
-        stage('git checkout'){
-            steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ramalaxmibandi/jenkins-exercise.git']]])
-            }
-        }
         stage('Build docker image'){
             steps{
                 script{
