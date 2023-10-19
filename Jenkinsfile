@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('git checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ramalaxmibandi/jenkins-exercise']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ramalaxmibandi/jenkins-exercise.git']]])
             }
         }
         stage('Build docker image'){
@@ -31,7 +31,7 @@ pipeline {
     }
       // stage('Push image to Hub') {
            steps {
-                sh 'docker push ramalaxmi/devops-integration:1.0'
+                sh 'docker push ramalaxmi/devops-integration:$BUILD_NUMBER'
                }
            }
 
