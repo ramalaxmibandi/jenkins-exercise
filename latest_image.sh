@@ -20,5 +20,5 @@ done
 
 echo "greatesvalue:"  $greatestValue
 echo "latest-tag:" $latestTag
-image="$(docker images ramalaxmi/devops-integration:$latestTag | awk '{print $2}' | sed '1d')"
+image="$(docker images ramalaxmi/myimage:$latestTag | awk '{print $2}' | sed '1d')"
 echo $image
