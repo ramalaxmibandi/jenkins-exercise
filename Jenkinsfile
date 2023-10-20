@@ -34,7 +34,7 @@ pipeline {
        stage('Push image to Hub') {
            steps {
                 sh 'docker push ramalaxmi/myimage:$BUILD_NUMBER'
- i              }
+               }
            }
 
     }
