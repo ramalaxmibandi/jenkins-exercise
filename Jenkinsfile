@@ -24,7 +24,7 @@ pipeline {
         stage('latest image of docker') {
             steps {
                 script {
-                 sh './latest-image.sh ramalaxmi/myimage'   
+                 sh './latest_image.sh ramalaxmi/myimage'   
                 }
             }
             
