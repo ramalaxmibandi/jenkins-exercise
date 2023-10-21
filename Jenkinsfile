@@ -21,14 +21,6 @@ pipeline {
                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-        stage('latest image of docker') {
-            steps {
-                script {
-                 sh './latest_image.sh ramalaxmi/myimage'   
-                }
-            }
-            
-        }
 
 
        stage('Push image to Hub') {
