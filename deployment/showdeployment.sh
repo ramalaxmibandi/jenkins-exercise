@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat deployment.yaml
+cat /deployment/deployment.yaml
