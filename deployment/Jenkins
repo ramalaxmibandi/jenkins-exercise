@@ -15,7 +15,7 @@ pipeline {
      stage('replacing latest image into deployment.yaml file') {
 	     steps {
 	         script {
-	           sh './deployment/replace_image.sh'
+	           sh './deployment/image_replace.sh'
 	        	}
          	}
 	}
