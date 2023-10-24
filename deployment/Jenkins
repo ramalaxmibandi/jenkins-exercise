@@ -24,7 +24,7 @@ pipeline {
      stage('print  deployment.yaml file after replacinf latest image') {
              steps {
                script {
-                    sh './deployment/showdeployment.sh'
+                    sh 'cat ./deployment/deployment.yaml'
                 }
              }
         }
