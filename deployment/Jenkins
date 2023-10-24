@@ -2,16 +2,7 @@ pipeline {
 
     agent any
  stages {
-        stage('Example') {
-            steps {
-                sh '''
-echo PATH before is $PATH
-PATH=$PATH:/var/jenkins_home/workspace/deployment-pipeline
-echo PATH after is $PATH
-echo "{ 'foo': 123, 'bar': 456 }" | jq ".foo"
-                '''
-            }
-        }	
+        	
      stage('getting latest image from docker hub') {
             steps {
                 script {
