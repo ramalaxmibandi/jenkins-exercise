@@ -11,9 +11,7 @@ echo PATH after is $PATH
 echo "{ 'foo': 123, 'bar': 456 }" | jq ".foo"
                 '''
             }
-        }
-    }	
- stages{
+        }	
      stage('getting latest image from docker hub') {
             steps {
                 script {
