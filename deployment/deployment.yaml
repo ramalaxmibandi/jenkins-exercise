@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: ramalaxmi/myimage: 1
+      - image: ramalaxmi/myimage: 3
         name: test-image
         ports:
         - containerPort: 8080
