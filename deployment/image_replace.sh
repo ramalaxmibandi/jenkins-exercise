@@ -3,7 +3,7 @@
 output_image_tag=$(./latest_image.sh)
 
 # Define the path to your deployment.yaml file
-deployment_yaml="deployment.yaml"
+deployment_yaml="deployment/deployment.yaml"
 
 # Check if the deployment.yaml file exists
 if [ -f "$deployment_yaml" ]; then
