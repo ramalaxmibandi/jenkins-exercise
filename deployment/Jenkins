@@ -6,7 +6,7 @@ pipeline {
      stage('getting latest image from docker hub') {
             steps {
                 script {
-                 sh './latest_image.sh'   
+                 sh './deployment/latest_image.sh'   
                 }
             }
             
@@ -15,7 +15,7 @@ pipeline {
      stage('replacing latest image into deployment.yaml file') {
 	     steps {
 	         script {
-	           sh './replace_image.sh'
+	           sh './deployment/replace_image.sh'
 	        	}
          	}
 	}
