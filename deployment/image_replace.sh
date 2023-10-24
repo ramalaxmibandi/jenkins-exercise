@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run the shell script to get the image name and tag (e.g., "my-image:latest")
-output_image_tag=$(./latest_image.sh)
+output_image_tag=$(./deployment/latest_image.sh)
 
 # Define the path to your deployment.yaml file
 deployment_yaml="deployment/deployment.yaml"
